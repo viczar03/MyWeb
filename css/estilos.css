@@ -1,0 +1,898 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+body{
+	background: #3369e7;	
+}
+
+.contenedor{
+	display: flex;
+	width: 90%;
+	margin: auto;
+	flex-direction: column;
+	padding-top: 30px;
+}
+
+#btn_menu{
+	display: none;
+}
+
+.contenedor_header{
+	display: flex;
+	flex-direction: column;
+}
+
+h1{
+	text-align: center;
+	font-weight: 100;
+	font-size: 36px;
+	padding-top: 30px;
+}
+
+.contenedor_nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+nav ul{
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	display: flex;
+}
+
+nav ul li{
+	display: inline-block;
+}
+
+.menu ul li a{
+	text-decoration: none;
+	color: #ffffff;
+	margin-right: 25px;
+	font-weight: 400;
+}
+
+label{
+	display: none;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	/*border-right: 1px solid #ffffff;*/
+}
+
+label i{
+	font-size: 30px;
+}
+
+label:hover{
+	cursor: pointer;
+	/*background: rgba(0,0,0,0.3);*/
+}
+
+@media(max-width: 600px){
+	label{
+		display: block;
+		text-align: right;
+		padding-top: 20px;
+	}
+
+	.contenedor_nav .redes{
+		display: none;
+	}
+
+	.menu{
+		position: absolute;
+		background: rgba(0,0,0,0.3);
+		width: 90%;
+		margin-left: -210%;
+		transition: all 0.5s;
+	}
+
+	.menu ul{
+		flex-direction: column;
+	}
+
+	.menu ul li{
+		padding: 10px;
+	}
+
+	.menu ul li:hover{
+		background: rgba(255,255,255,0.3);
+	}
+
+	.menu ul li a{
+		font-weight: bold;
+	}
+
+	#btn_menu:checked ~ .menu{
+		margin: 0;
+	}
+}
+
+/*----------Banner----------*/
+.banner{
+	padding-top: 20px;
+}
+
+.banner img{
+	width: 100%
+}
+
+h3{
+	font-size: 45px;
+	font-weight: 100;
+}
+
+h4{
+	font-size: 45px;
+	font-weight: 600;
+}
+
+.banner .datos .parrafo p{
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #cccccc;
+	line-height: 29px;
+}
+
+.datos{
+	position: absolute;
+	top:260px;
+	left: 150px;
+	width: 550px;
+}
+
+.parrafo{
+	padding-top: 10px;
+}
+
+.leer{
+	padding-top: 30px;
+}
+
+.banner .datos .leer a{
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #cccccc;
+	border-style: solid;
+	border-color: #ffffff;
+	width: 135px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/*----------About----------*/
+
+.about{
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+	padding: 80px;
+}
+
+.about .titulo_imagen{
+	display: flex;
+	flex-direction: row;
+}
+
+.about .titulo_imagen h1{
+	color: #323648;
+	text-align: left;
+	padding-top: 0;
+}
+
+.about .titulo_imagen h5{
+	color: #323648;
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+.about .titulo_imagen p{
+	color: #323648;
+	padding-right: 30px;
+	padding-top: 20px;
+	line-height: 30px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	text-align: justify;
+}
+
+.about .titulo_imagen img{
+	width: 270px;
+	height: 270px;
+}
+
+.about .botones{
+	padding-top: 20px;
+}
+
+.about .botones .curriculum{
+	background-color: #00bcd4;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 15px;
+}
+
+.about .botones .contrato{
+	background-color: #3369e7;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 15px;
+}
+
+#acerca_de{
+	transition: 0.2s;
+}
+
+/*----------Servicios----------*/
+
+.servicio{
+	background-color: #f6f6f6;
+	display: flex;
+	flex-direction: column;
+	padding: 80px;
+}
+
+.servicio .titulo_servicio h1{
+	color: #323648;
+	padding-top: 0;
+	text-align: left;
+}
+
+.servicio .cuadros_servicio{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 30px;
+}
+
+.servicio .cuadros_servicio .cuadro{
+	background-color: #ffffff;
+	padding: 20px;
+	width: 230px;
+	text-align: center;
+}
+
+.servicio .cuadros_servicio .cuadro img{
+	width: 40px;
+	margin: 20px;
+	background-image: #3369e7;
+}
+
+.servicio .cuadros_servicio h5{
+	color: #323648;
+	font-weight: bold;
+	text-align: center;
+}
+
+.servicio .cuadros_servicio p{
+	color: #323648;
+	line-height: 30px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+/*----------Habilidades----------*/
+
+.habilidades{
+	display: block;
+	flex-direction: column;
+	background-color: #ffffff;
+	padding: 80px;
+}
+
+.habilidades .titulo_habilidades h1{
+	color: #323648;
+	padding-top: 0;
+	text-align: left;
+}
+
+.habilidades .caja_habilidades{
+	display: flex;
+	flex-direction: row;
+	padding-top: 30px;
+}
+
+.habilidades .caja_habilidades .porcentajes_habilidades{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.habilidades .caja_habilidades .porcentajes_habilidades .porcentaje{
+
+}
+
+.habilidades .caja_habilidades .porcentajes_habilidades .porcentaje h6{
+	color: #323648;
+	font-weight: bold;
+	text-align: left;
+	font-size: 15px;
+	padding: 10px;
+}
+
+.habilidades .caja_habilidades .porcentajes_habilidades .porcentaje .border1{
+	border-bottom: 7px solid #ff4f81;
+	width: 90%;
+}
+
+.habilidades .caja_habilidades .porcentajes_habilidades .porcentaje .border2{
+	border-bottom: 7px solid #0dd3ff;
+	width: 85%;
+}
+
+.habilidades .caja_habilidades .porcentajes_habilidades .porcentaje .border3{
+	border-bottom: 7px solid #3369e7;
+	width: 70%;
+}
+
+.habilidades .caja_habilidades .porcentajes_habilidades .comentario_habilidades p{
+	color: #323648;
+	line-height: 30px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	text-align: left;
+}
+
+.habilidades .caja_habilidades .experiencia_habilidades{
+	display: flex;
+	flex-direction: column;
+	padding-left: 30px;
+	width: 50%;
+}
+
+.habilidades .caja_habilidades .experiencia_habilidades .experiencia{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.habilidades .caja_habilidades .experiencia_habilidades .experiencia .proyecto img{
+	
+}
+
+.habilidades .caja_habilidades .experiencia_habilidades .comentario_experiencia p{
+	color: #323648;
+	line-height: 30px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	text-align: left;
+	margin: 10px;
+}
+
+.habilidades .caja_habilidades .experiencia_habilidades img{
+	width: 40px;
+	text-align: center;
+}
+
+.habilidades .caja_habilidades .experiencia_habilidades h3{
+	font-size: 45px;
+	font-weight: bold;
+	color: #323648;
+	text-align: center;
+}
+
+.habilidades .caja_habilidades .experiencia_habilidades .experiencia h6{
+	color: #323648;
+	font-weight: bold;
+	text-align: center;
+	font-size: 15px;
+}
+
+/*----------Proyectos----------*/
+
+.portafolio{
+	background-color: #f6f6f6;
+	display: flex;
+	flex-direction: column;
+	padding: 80px;
+}
+
+.portafolio .titulo_portafolio h1{
+	color: #323648;
+	padding-top: 0;
+	text-align: left;
+}
+
+.portafolio .contenedor_portafolio{
+	padding-top: 30px;
+}
+
+.portafolio .fotos_portafolio{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.portafolio .fotos_portafolio .dos_fotos{
+	display: flex;
+	flex-direction: row;
+}
+
+.portafolio .fotos_portafolio img{
+	width: 190px;
+	padding: 5px;
+}
+
+/*----------- Habilidades ----------*/
+
+.educacion{
+	display: block;
+	flex-direction: column;
+	background-color: #ffffff;
+	padding: 80px;
+}
+
+.educacion .titulo_educacion h1{
+	color: #323648;
+	padding-top: 0;
+	text-align: left;
+}
+
+.educacion .botones{
+	display: flex;
+	justify-content: center;
+	padding-top: 30px;
+}
+
+.educacion .botones .botonedu{
+	background-color: #3369e7;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 15px;
+	margin-right: 5px;
+}
+
+.educacion .botones .botonexp{
+	background-color: #333333;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 15px;
+	margin-left: 5px;
+}
+
+.educacion .cuadros{
+	display: flex;
+	flex-direction: column;
+}
+
+.educacion .cuadros .nota{
+	display: flex;
+	flex-direction: row;
+	padding-top: 30px;
+}
+
+.educacion .cuadros .nota h2{
+	color: #000000;
+	font-size: 20px;
+}
+
+.educacion .cuadros .nota h3{
+	color: #000000;
+	font-size: 18px;
+}
+
+.educacion .cuadros .nota p{
+	color: #000000;
+	font-size: 15px;
+}
+
+.educacion .cuadros2{
+	display: flex;
+	flex-direction: column;
+	display: none;
+}
+
+.educacion .cuadros2 .nota{
+	display: flex;
+	flex-direction: row;
+	padding-top: 30px;
+}
+
+.educacion .cuadros2 .nota h2{
+	color: #000000;
+	font-size: 20px;
+}
+
+.educacion .cuadros2 .nota h3{
+	color: #000000;
+	font-size: 18px;
+}
+
+.educacion .cuadros2 .nota p{
+	color: #000000;
+	font-size: 15px;
+}
+
+/*---------- Contacto ----------*/
+
+.contacto{
+	display: block;
+	flex-direction: column;
+	background-color: #3369e7;
+	padding: 80px;
+	border-bottom: 1px solid #ffffff;
+}
+
+.contacto .titulo_contacto h1{
+	color: #ffffff;
+	padding-top: 0;
+	text-align: left;
+}
+
+.contacto .formulario{
+	display: flex;
+	flex-direction: row;
+	padding-top: 30px;
+}
+
+.contacto .formulario .formulario1{
+	width: 100%;
+	margin-right: 10px;
+}
+
+.contacto .formulario .formulario1 p{
+	margin-bottom: 0px;
+}
+
+.contacto .formulario .formulario1 input{
+	width: 100%;
+	margin-top: 0px;
+	height: 50px;
+	margin-bottom: 20px;
+	background-color: #1b4ab6;
+	border: none;
+	padding: 10px;
+}
+
+textarea{
+	width: 100%;
+	border: none;
+	background-color: #1b4ab6;
+	padding: 10px;
+	height: 145px;
+}
+
+::-webkit-input-placeholder{
+	padding-left: 20px;
+	color: #ffffff;
+}
+
+::-moz-input-placeholder{
+	padding-left: 20px;
+	color: #ffffff;
+}
+
+.contacto .formulario .formulario2{
+	width: 100%;
+	margin-left: 10px;
+}
+
+.contacto .formulario .formulario2 p{
+	margin-bottom: 0px;
+}
+
+.contacto .formulario .formulario2 input{
+	width: 100%;
+	margin-top: 0px;
+	height: 40px;
+	background-color: #1b4ab6;
+	border: none;
+}
+
+.contacto .boton p input{
+	color: #3369e7;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/*---------- Pie de Página ----------*/
+
+.pie{
+	display: flex;
+	justify-content: center;
+}
+
+.pie p{
+	color: #ffffff;
+	padding-top: 20px;
+}
+
+.espacio{
+	background-color: #ffffff;
+	width: 100%;
+	height: 60px;
+}
+
+.contenedor_up{
+	position: fixed;
+	bottom: 60px;
+	right: 40px;
+	width: 66px;
+	height: 66px;
+	z-index: -1;
+}
+
+.contenedor_up .boton_up{
+	width: 0rem;
+	height: 0rem;
+	background: #3369e7;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: .2s;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% -50%);
+	z-index: -1;
+}
+
+.contenedor_up .boton_up i{
+	position: absolute;
+	font-size: 20px;
+	top: 48%;
+	left: 50%;
+	transform: translate(-50% -50%) scale(0);
+	color: #ffffff;
+	transition: 0.2s;
+}
+
+.show{
+	z-index: 10;
+}
+
+.show .contenedor_up .boton_up{
+	animation: popup .3s ease-in-out;
+	width: 66px;
+	height: 66px;
+	z-index: 11;
+}
+
+.show i{
+	transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup{
+	0%{
+		width: 0rem;
+		height: 0rem;
+	}
+	50%{
+		width: 80px;
+		height: 80px;
+	}
+	100%{
+		width: 66px;
+		height: 66px;
+	}
+}
+
+/*---------- Responsivo ----------*/
+
+@media screen and (max-width: 600px){
+	.banner{
+		height: 500px;
+	}
+
+	.banner img{
+		width: 100%;
+		height: 100%;
+	}
+
+	.datos{
+		position: absolute;
+		top:215px;
+		left: 75px;
+		width: 275px;
+	}
+
+	.banner .datos .parrafo p{
+		font-size: 15px;
+		font-weight: bold;
+		letter-spacing: 1px;
+		color: #cccccc;
+		line-height: 29px;
+	}
+
+	.leer{
+		/*padding-top: 10px;*/
+	}
+
+	.banner .datos .leer a{
+		/*text-decoration: none;
+		font-size: 10px;
+		font-weight: bold;
+		letter-spacing: 1px;
+		color: #cccccc;
+		border-style: solid;
+		border-color: #ffffff;
+		width: 135px;
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 5px;
+		padding-bottom: 5px;*/
+	}
+
+	h3{
+		font-size: 35px;
+		font-weight: 100;
+	}
+
+	h4{
+		font-size: 35px;
+		font-weight: 600;
+	}
+
+	.about{
+		padding: 50px;
+	}
+
+	.about .titulo_imagen{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.about .titulo_imagen img{
+		width: 100%;
+	}
+
+	.about .titulo_imagen .datos_acercade .botones{
+		padding-top: 20px;
+		padding-bottom: 30px;
+	}
+
+	.about .titulo_imagen .datos_acercade .botones .curriculum{
+		margin-right: 2px;
+	}
+
+	.about .titulo_imagen .datos_acercade .botones .contrato{
+		margin-left: 2px;
+	}
+
+	.about .titulo_imagen p{
+		font-size: 13px;
+		line-height: 20px;
+		padding-right: 0px;
+	}
+
+	.about .botones .curriculum{
+		background-color: #00bcd4;
+		text-decoration: none;
+		color: #ffffff;
+		font-size: 10px;
+		font-weight: bold;
+		padding: 15px;
+	}
+
+	.about .botones .curriculum a{
+		padding-right: 20px;
+	}
+
+	.about .botones .contrato{
+		background-color: #3369e7;
+		text-decoration: none;
+		color: #ffffff;
+		font-size: 10px;
+		font-weight: bold;
+		padding: 15px;
+	}
+
+	.about .botones .contrato a{
+		padding-left: 20px;
+	}
+
+	.servicio .cuadros_servicio{
+	display: flex;
+	flex-direction: column;
+	}
+
+	.servicio .cuadros_servicio .cuadro{
+		margin-top: 10px;
+	}
+
+	.servicio{
+		padding: 50px;
+	}
+
+	.servicio .cuadros_servicio .cuadro{
+	background-color: #ffffff;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	}
+
+	.habilidades{
+		padding: 50px;
+	}
+
+	.habilidades .caja_habilidades{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.habilidades .caja_habilidades .porcentajes_habilidades{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.habilidades .caja_habilidades .experiencia_habilidades{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		padding-left: 0px;
+		padding-top: 50px;
+	}
+
+	.portafolio{
+		padding: 50px;
+	}
+
+	.portafolio .fotos_portafolio{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	}
+
+	.portafolio .fotos_portafolio .dos_fotos{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.educacion{
+		padding: 50px;
+	}
+
+	.educacion .cuadros{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.educacion .cuadros .nota{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contacto{
+		padding: 50px;
+	}
+
+	.contacto .formulario{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contacto .formulario .formulario2{
+		margin-left: 0px;
+	}
+
+	.contacto .boton{
+		padding-top: 25px;
+	}
+
+	}
