@@ -20,6 +20,15 @@ function mostrarExp(){
    }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    var boton2 = document.getElementById('boton2');
+    // onClick's logic below:
+    boton2.addEventListener('click', function() {
+        mostrarExp();
+    });
+});
+
+
 function mostrarEdu(){
 
 	var clic = 1;
@@ -40,25 +49,10 @@ function mostrarEdu(){
 
 }
 
-function limpiarFormulario() {
-    document.getElementById("miformulario").reset();
-}
-
-window.onscroll = function(){
-   
-   if (document.documentElement.scrollTop > 100) {
-      document.querySelector('.contenedor_up')
-      .classList.add('show');
-   }else{
-      document.querySelector('.contenedor_up')
-      .classList.remove('show');
-   }
-}
-
-document.querySelector('.contenedor_up')
-.addEventListener('click', () ->{
-   window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-   });
+document.addEventListener('DOMContentLoaded', function() {
+    var boton1 = document.getElementById('boton1');
+    // onClick's logic below:
+    boton1.addEventListener('click', function() {
+        mostrarEdu();
+    });
 });
