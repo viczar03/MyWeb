@@ -9,6 +9,10 @@
 	color: #ffffff;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
 	background: #3369e7;	
 }
