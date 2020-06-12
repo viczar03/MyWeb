@@ -859,9 +859,13 @@ textarea{
 	justify-content: space-between;
 	}
 
+	.portafolio .fotos_portafolio img{
+		width: 100%;
+	}
+
 	.portafolio .fotos_portafolio .dos_fotos{
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 	}
 
 	.educacion{
